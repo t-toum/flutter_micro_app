@@ -1,0 +1,33 @@
+name: flutter_micro_app
+
+sdkPath: .fvm/flutter_sdk
+ide:
+  intellij:
+    enabled: false
+packages:
+  - apps/**
+  - modules/**
+  - shared/**
+ignore:
+  - modules/**/example
+
+scripts:
+  analyze:
+    run: melos exec --concurrency=10 -- "flutter analyze"
+    description: Run `flutter analyze` in all packages.
+  bootstrap:
+    run: melos bootstrap --scope="**"
+    description: "Initialize the monorepo, link all local packages, and run `pub get`."
+  clean:
+    run: melos exec --concurrency=10 -- "flutter clean"
+    description: Run `flutter clean` in all packages.
+  build-runner:
+    description: Generate build-runner
+    run: |
+      melos exec -c 1 --scope="**" -- \
+        flutter pub run build_runner build --delete-conflicting-outputs
+command:
+  version:
+    message: |
+      chore: cut package releases 🎉
+      {new_package_versions}

@@ -1,0 +1,113 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "flutter_micro_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "base_app",
+            "cwd": "apps/base_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "base_app (profile mode)",
+            "cwd": "apps/base_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "base_app (release mode)",
+            "cwd": "apps/base_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "home",
+            "cwd": "packages/home",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "home (profile mode)",
+            "cwd": "packages/home",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "home (release mode)",
+            "cwd": "packages/home",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "todos",
+            "cwd": "packages/todos",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "todos (profile mode)",
+            "cwd": "packages/todos",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "todos (release mode)",
+            "cwd": "packages/todos",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "localization",
+            "cwd": "shared/localization",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "localization (profile mode)",
+            "cwd": "shared/localization",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "localization (release mode)",
+            "cwd": "shared/localization",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "network",
+            "cwd": "shared/network",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "network (profile mode)",
+            "cwd": "shared/network",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "network (release mode)",
+            "cwd": "shared/network",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
