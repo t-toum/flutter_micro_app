@@ -14,7 +14,7 @@ class TodoRepositoryImpl implements TodoRepository {
       final todos = await _remoteDataSource.getTodos();
       return Right(todos);
     } on ServerException catch (e) {
-      return Left(ServerFailure(e.msg));
+      return Left(ServerFailure(e.message, code: e.code, details: e.details));
     }
   }
 }
