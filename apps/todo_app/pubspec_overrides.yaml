@@ -1,6 +1,6 @@
-# melos_managed_dependency_overrides: todos,common
+# melos_managed_dependency_overrides: todo,core
 dependency_overrides:
-  common:
-    path: ../../shared/common
-  todos:
-    path: ../../modules/todos
+  todo:
+    path: ../../modules/todo
+  core:
+    path: ../../shared/core

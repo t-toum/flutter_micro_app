@@ -1,27 +1,22 @@
-import 'package:common/common.dart';
-import 'package:todo_app/home/cubit/todo_cubit.dart';
-import 'package:todo_app/home/pages/todo_page.dart';
-import 'package:todos/todos.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:todo/todo.dart';
+import 'package:todo_app/pages/home_page.dart';
 
-class AppModule extends Module {
-  @override
-  List<Module> get imports => [TodoModule()];
-
+class AppModule implements Module {
   @override
   void binds(Injector i) {
-    //Register factory
-    i.add<TodoCubit>(TodoCubit.new);
   }
 
   @override
+  void exportedBinds(Injector i) {
+  }
+
+  @override
+  List<Module> get imports => [];
+
+  @override
   void routes(RouteManager r) {
-    r.child(
-      '/',
-      child:
-          (_) => BlocProvider<TodoCubit>(
-            create: (context) => Modular.get<TodoCubit>()..getTodo(),
-            child: const TodoPage(),
-          ),
-    );
+    r.child('/', child: (context) => const HomePage());
+    r.module('/todo', module: TodoModule());
   }
 }
