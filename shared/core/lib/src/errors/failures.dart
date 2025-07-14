@@ -15,3 +15,11 @@ class ServerFailure extends Failure {
 class CacheFailure extends Failure {
   const CacheFailure(super.msg);
 }
+
+class NetworkFailure extends Failure {
+  const NetworkFailure(super.msg);
+}
+
+class ValidationFailure extends Failure {
+  const ValidationFailure(super.msg);
+}

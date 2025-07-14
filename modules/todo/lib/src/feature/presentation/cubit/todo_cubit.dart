@@ -16,7 +16,7 @@ class TodoCubit extends Cubit<TodoState> {
       (failure) {
         emit(state.copyWith(
           error: failure.msg,
-          status: DataStatus.failed,
+          status: DataStatus.failure,
         ));
       },
       (todos) {
