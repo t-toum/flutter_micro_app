@@ -6,3 +6,9 @@ analyzer:
   exclude: 
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+
+# Coverage exclusions
+coverage:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"

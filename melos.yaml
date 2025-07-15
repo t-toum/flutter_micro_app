@@ -33,6 +33,44 @@ scripts:
     run: |
       melos exec --scope="todo" -- \
         flutter test --coverage --coverage-path=coverage/lcov.info
+    description: Run tests with coverage for todo module
+  test:coverage:clean:
+    run: |
+      melos exec --scope="todo" -- \
+        "if [ -f coverage/lcov.info ]; then \
+          lcov --remove coverage/lcov.info \
+            '**/*.g.dart' \
+            '**/*.freezed.dart' \
+            'lib/src/core/network/rest_client.g.dart' \
+            -o coverage/lcov_cleaned.info && \
+          echo 'Coverage cleaned - generated files excluded'; \
+        else \
+          echo 'No coverage file found. Run test:coverage first.'; \
+        fi"
+    description: Clean coverage by removing generated files
+  test:coverage:html:
+    run: |
+      melos exec --scope="todo" -- \
+        "if [ -f coverage/lcov_cleaned.info ]; then \
+          if command -v genhtml >/dev/null 2>&1; then \
+            genhtml coverage/lcov_cleaned.info -o coverage/html \
+              --title 'Todo Module Coverage Report' \
+              --show-details \
+              --legend && \
+            echo 'HTML coverage report generated at coverage/html/index.html'; \
+          else \
+            echo 'genhtml not found. Install: brew install lcov (macOS) or apt-get install lcov (Ubuntu)'; \
+          fi; \
+        else \
+          echo 'No cleaned coverage file found. Run test:coverage:clean first.'; \
+        fi"
+    description: Generate HTML coverage report from cleaned coverage data
+  test:coverage:full:
+    run: |
+      melos run test:coverage && \
+      melos run test:coverage:clean && \
+      melos run test:coverage:html
+    description: Run full coverage workflow - test, clean, and generate HTML report
 command:
   version:
     message: |
