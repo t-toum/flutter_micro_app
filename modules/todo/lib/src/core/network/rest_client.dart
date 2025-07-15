@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:todo/src/feature/data/models/todo_model.dart';
+import 'package:todo/src/feature/home/data/models/todo_model.dart';
 part 'rest_client.g.dart';
 
 @RestApi()

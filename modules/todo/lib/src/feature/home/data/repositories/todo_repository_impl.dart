@@ -1,8 +1,8 @@
 import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
-import 'package:todo/src/feature/data/datasources/todo_remote_datasource.dart';
-import 'package:todo/src/feature/domain/entities/todo.dart';
-import 'package:todo/src/feature/domain/repositories/todo_repository.dart';
+import 'package:todo/src/feature/home/data/datasources/todo_remote_datasource.dart';
+import 'package:todo/src/feature/home/domain/entities/todo.dart';
+import 'package:todo/src/feature/home/domain/repositories/todo_repository.dart';
 
 class TodoRepositoryImpl implements TodoRepository {
   final TodoRemoteDatasource _remoteDataSource;

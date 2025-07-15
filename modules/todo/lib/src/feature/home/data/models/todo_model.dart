@@ -1,6 +1,6 @@
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:todo/src/feature/domain/entities/todo.dart';
+import 'package:todo/src/feature/home/domain/entities/todo.dart';
 part 'todo_model.g.dart';
 @JsonSerializable()
 class TodoModel extends Todo {

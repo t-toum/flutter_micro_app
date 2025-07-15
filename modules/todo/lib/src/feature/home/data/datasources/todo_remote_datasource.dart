@@ -1,7 +1,7 @@
 import 'package:core/core.dart';
 import 'package:dio/dio.dart';
 import 'package:todo/src/core/network/rest_client.dart';
-import 'package:todo/src/feature/data/models/todo_model.dart';
+import 'package:todo/src/feature/home/data/models/todo_model.dart';
 
 abstract class TodoRemoteDatasource {
   Future<List<TodoModel>> getTodos();

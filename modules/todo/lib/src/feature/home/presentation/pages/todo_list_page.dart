@@ -1,7 +1,7 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo/src/feature/presentation/cubit/todo_cubit.dart';
+import 'package:todo/src/feature/home/presentation/cubit/todo_cubit.dart';
 
 class TodoListPage extends StatelessWidget {
   const TodoListPage({super.key});

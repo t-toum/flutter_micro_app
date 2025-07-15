@@ -3,12 +3,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:todo/src/core/network/rest_client.dart';
-import 'package:todo/src/feature/data/datasources/todo_remote_datasource.dart';
-import 'package:todo/src/feature/data/repositories/todo_repository_impl.dart';
-import 'package:todo/src/feature/domain/repositories/todo_repository.dart';
-import 'package:todo/src/feature/domain/usecases/get_todo_usecase.dart';
-import 'package:todo/src/feature/presentation/cubit/todo_cubit.dart';
-import 'package:todo/src/feature/presentation/pages/todo_list_page.dart';
+import 'package:todo/src/feature/home/data/datasources/todo_remote_datasource.dart';
+import 'package:todo/src/feature/home/data/repositories/todo_repository_impl.dart';
+import 'package:todo/src/feature/home/domain/repositories/todo_repository.dart';
+import 'package:todo/src/feature/home/domain/usecases/get_todo_usecase.dart';
+import 'package:todo/src/feature/home/presentation/cubit/todo_cubit.dart';
+import 'package:todo/src/feature/home/presentation/pages/todo_list_page.dart';
 
 class TodoModule extends Module {
   @override
