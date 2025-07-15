@@ -26,6 +26,13 @@ scripts:
     run: |
       melos exec -c 1 --scope="**" -- \
         flutter pub run build_runner build --delete-conflicting-outputs
+  test:
+    run: melos exec --scope="todo" -- "flutter test"
+    description: Run all tests
+  test:coverage:
+    run: |
+      melos exec --scope="todo" -- \
+        flutter test --coverage --coverage-path=coverage/lcov.info
 command:
   version:
     message: |
